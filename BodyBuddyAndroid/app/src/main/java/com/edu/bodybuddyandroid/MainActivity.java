@@ -83,10 +83,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             t_lati.setText(": " + Double.toString(latitude ));
             t_longi.setText((": " + Double.toString(longitude)));
             Log.d(TAG + " NETWORK : ", Double.toString(latitude )+ '/' + Double.toString(longitude));
-            Log.d(TAG, "한뭉터기");
         }
         //얘는 좌표값을 구하는 것이 아닌 다른 어플리케이션이나 서비스가 좌표값을 구하면 단순히 그 값을 받아 오기만 하는
-        //전달자 역할 이라는데.. 어디에 쓰이는 건지 모르겠다.
+        //전달자 역할
         if(location.getProvider().equals(LocationManager.PASSIVE_PROVIDER)) {
             latitude = location.getLatitude();
             longitude = location.getLongitude();
